@@ -1,0 +1,40 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"need_inspiration\"}}]": "action_reset_all_slots",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"need_inspiration\"}}, {\"prev_action\": {\"action_name\": \"action_reset_all_slots\"}, \"user\": {\"intent\": \"need_inspiration\"}}]": "cuisine_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"need_inspiration\"}}, {\"prev_action\": {\"action_name\": \"action_reset_all_slots\"}, \"user\": {\"intent\": \"need_inspiration\"}}, {\"active_loop\": {\"name\": \"cuisine_form\"}, \"prev_action\": {\"action_name\": \"cuisine_form\"}, \"user\": {\"intent\": \"need_inspiration\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"hangry\"}}]": "action_reset_all_slots",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"hangry\"}}, {\"prev_action\": {\"action_name\": \"action_reset_all_slots\"}, \"user\": {\"intent\": \"hangry\"}}]": "utter_emergency",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"hangry\"}}, {\"prev_action\": {\"action_name\": \"action_reset_all_slots\"}, \"user\": {\"intent\": \"hangry\"}}, {\"prev_action\": {\"action_name\": \"utter_emergency\"}, \"user\": {\"intent\": \"hangry\"}}]": "address_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"hangry\"}}, {\"prev_action\": {\"action_name\": \"action_reset_all_slots\"}, \"user\": {\"intent\": \"hangry\"}}, {\"prev_action\": {\"action_name\": \"utter_emergency\"}, \"user\": {\"intent\": \"hangry\"}}, {\"active_loop\": {\"name\": \"address_form\"}, \"prev_action\": {\"action_name\": \"address_form\"}, \"user\": {\"intent\": \"hangry\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"address_form\"}}]": "action_propose_food_place",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"address_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_propose_food_place\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"cuisine_form\"}}]": "action_propose_food",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"cuisine_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_propose_food\"}}]": "utter_propose_food",
+      "[{\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"cuisine_form\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"action_propose_food\"}}, {\"active_loop\": {\"name\": \"should_not_be_set\"}, \"prev_action\": {\"action_name\": \"utter_propose_food\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "cuisine_form",
+      "address_form"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_reset_all_slots\"}}, {\"active_loop\": {\"name\": \"cuisine_form\"}, \"prev_action\": {\"action_name\": \"cuisine_form\"}, \"user\": {\"intent\": \"need_inspiration\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_emergency\"}}, {\"active_loop\": {\"name\": \"address_form\"}, \"prev_action\": {\"action_name\": \"address_form\"}, \"user\": {\"intent\": \"hangry\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "handling active loops and forms - address_form",
+      "handling active loops and forms - address_form - action_listen",
+      "predicting default action with intent restart",
+      "handling active loops and forms - cuisine_form - action_listen",
+      "handling active loops and forms - cuisine_form",
+      "predicting default action with intent session_start",
+      "predicting default action with intent back"
+    ]
+  }
+}

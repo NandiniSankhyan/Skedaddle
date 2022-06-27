@@ -1,0 +1,115 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - what's up
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - cya
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - nice
+    - wow
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - something else
+    
+- intent: thanks
+  examples: |
+    - thank you
+    - thx
+    - thanks
+    
+- intent: need_inspiration
+  examples: |
+    - I need cooking inspiration
+    - Give me some inspiration
+    - Inspiration needed
+    - Inspiration please
+    - give me some ideas
+    - do you have some recipes?
+    - i don't know what I should cook
+
+- intent: hangry
+  examples: |
+    - hangry
+    - i need food
+    - hungry!
+    - i need something to eat
+    - i am starving
+    - food, now
+
+- intent: cuisine
+  examples: |
+    - i like [asian](cuisine) food
+    - i love [asian](cuisine) food
+    - i like [italian](cuisine) food
+    - give me [italian](cuisine)
+    - [French](cuisine) cuisine
+    - i like [asian](cuisine) food
+    - [Asian](cuisine) food is my favourite
+    - yummy [asian](cuisine)
+    - [Asian](cuisine) is great
+    - [Italian](cuisine) please
+    - i prefer [Italian](cuisine)
+    - some [German](cuisine) food please
+    - do you have [Indian](cuisine) food
+    - today something [French](cuisine)
+
+- lookup: cuisine
+  examples: |
+    - Asian
+    - Italian
+    - French
+    - Indian
+    - German
+    - Spanish
+    - American
+
+- intent: address
+  examples: |
+    - Straßenname. 1, 95444 Bayreuth
+    - Bayreuth
+    - 95444 Bayreuth
