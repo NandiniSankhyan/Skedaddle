@@ -12,21 +12,21 @@ It is a text-based intelligent chatbot which will help international people in c
 
 The installation might take several minutes, since rasa depends on libraries, such as tensorflow.
 
-For the tutorial we need a conda environment with `pip` available to install Rasa:
+For the project we nee python3.7 virtual environment available to install Rasa:
 
-1. Create a new environemnt: `conda create -n week4 python=3.8`
-2. Activate the environment: `source activate week4`
-3. Install pip: `conda install pip`
-4. Install Rasa: `pip3 install rasa==2.5.0 --use-deprecated=legacy-resolver`
-5. Install spaCy: `conda install -c conda-forge spacy`
-5.1 Install English embeddings, e.g.: `python -m spacy download en_core_web_md`
+1. Create a new environemnt: `python3.7 -m venv env `
+2. Activate the environment: `source env/bin/activate `
+3. Upgrade setuptools : `pip3 install --upgrade setuptools`
+4. Upgrade pip : `pip3 install --upgrade pip`
+5. Install Rasa: `pip install rasa=3.0.0`
+5. Install spaCy: `pip install spacy`
 
 You are all done with installing Rasa & spaCy. See how to use Rasa from the command line interface on: https://rasa.com/docs/rasa/command-line-interface
 
-Rasa depends on numpy 1.18.5. In case you are getting an error, re-install numpy `pip install numpy==1.18.5`
+Rasa depends on numpy 1.19.5. In case you are getting an error, re-install numpy `pip install numpy==1.19.5`
 
 ### There are newer Rasa versions available
-We will use Rasa version 2.5.0 to run the project properly yet there is already version 3.0 released.
+We will use Rasa version 3.0.0 to run the project.
 
 ### Run Rasa
 

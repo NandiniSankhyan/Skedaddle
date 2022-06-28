@@ -1,6 +1,0 @@
-[
-  {
-    "name": "cuisine",
-    "pattern": "(\\bAsian\\b|\\bItalian\\b|\\bFrench\\b|\\bIndian\\b|\\bGerman\\b|\\bSpanish\\b|\\bAmerican\\b)"
-  }
-]
