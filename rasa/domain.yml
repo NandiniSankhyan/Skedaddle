@@ -18,34 +18,39 @@ slots:
   choice:
     type: categorical
     values:
-      - In your Home Country
-      - In Germany
+      - Home Country
+      - Germany
     mappings:
     - type: from_entity
       entity: choice
       
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey I am Sked! How are you?"
 
   utter_again:
-  - text: "Can I help you with anything else?"
+  - text: "Do you need more help?"
 
   utter_start:
-  - text: "Where are you currently?"  
+  - text: "Where are you currently?(Home Country/Germany)"  
 
   utter_happy:
-  - text: "Great, How can I help you today?"
+  - text: "Great, How can I help you?"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye!"
+  - text: "See you next time!"
+  - text: "Enjoy and cu"
+  - text: "cya next time"
 
   utter_iamabot:
   - text: "I am a Sked."
 
   utter_giveinfo:
-  - text: "Ok! I will help you in the next Tutorial."
+  - text: "Ok! I understand you are in the {choice}. Dont worry, I will help you."
 
+  utter_giveinfo_next:
+  - text: "more info"
 
 
 session_config:

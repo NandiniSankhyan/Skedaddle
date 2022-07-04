@@ -3,8 +3,8 @@ version: "3.1"
 nlu:
 - intent: inform
   examples: |
-    - [In your Home Country](choice)
-    - [In Germany](choice)
+    - [Home Country](choice)
+    - [Germany](choice)
 
 - intent: thanks
   examples: |
@@ -80,6 +80,11 @@ nlu:
     - help please
     - help
     - need help
+    - yes
+    - yes please
+    - ya
+    - hm
+    - hmm
 
 - intent: mood_great
   examples: |
@@ -97,6 +102,10 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - fine
+    - i am fine
+    - good
+    - very good
 
 - intent: bot_challenge
   examples: |

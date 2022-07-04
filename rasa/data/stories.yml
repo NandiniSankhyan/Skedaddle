@@ -1,28 +1,33 @@
 version: "3.1"
 
 stories:
+  - story: beginning of flow
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+      - intent: reloc
+      - action: utter_start
+      - intent: inform
+      - slot_was_set:
+        - choice
+      - action: utter_giveinfo
+      - intent: thanks
+      - checkpoint: check_asked_question
 
-- story: start
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-  - intent: reloc
-  - action: utter_start
-  - intent: inform
-  - action: utter_giveinfo
-  - intent: thanks
-  - action: utter_again
+  - story: handle user affirm
+    steps:
+      - checkpoint: check_asked_question
+      - action: utter_again
+      - intent: affirm
+      - action: utter_giveinfo_next
+      - intent: thanks
+      - action: utter_goodbye
 
-- story: start again
-  steps:
-  - action: utter_again
-  - intent: affirm
-  - action: utter_happy
-
-- story: stop
-  steps:
-  - action: utter_again
-  - intent: deny
-  - action: utter_goodbye
+  - story: handle user deny
+    steps:
+      - checkpoint: check_asked_question
+      - action: utter_again
+      - intent: deny
+      - action: utter_goodbye
