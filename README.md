@@ -8,7 +8,7 @@ It is a text-based intelligent chatbot which will help international people in c
 - User should be able to select the items on checklist and get a text-based chatbot response and to be able to ask related queries and get responses in a conversation manner.
 - Detailed information on topics like: Blocked account, Travel and Public Health Insurance, City registration etc.
 
-## Install Rasa & spaCy
+## Install Rasa
 
 The installation might take several minutes, since rasa depends on libraries, such as tensorflow.
 
