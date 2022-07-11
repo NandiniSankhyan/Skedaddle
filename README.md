@@ -19,9 +19,9 @@ For the project we nee python3.7 virtual environment available to install Rasa:
 3. Upgrade setuptools : `pip3 install --upgrade setuptools`
 4. Upgrade pip : `pip3 install --upgrade pip`
 5. Install Rasa: `pip install rasa=3.0.0`
-5. Install spaCy: `pip install spacy`
 
-You are all done with installing Rasa & spaCy. See how to use Rasa from the command line interface on: https://rasa.com/docs/rasa/command-line-interface
+
+You are all done with installing Rasa. See how to use Rasa from the command line interface on: https://rasa.com/docs/rasa/command-line-interface
 
 Rasa depends on numpy 1.19.5. In case you are getting an error, re-install numpy `pip install numpy==1.19.5`
 
