@@ -3,16 +3,17 @@ version: "3.1"
 intents:
   - greet
   - inform
+  - inform_choice
   - goodbye
   - affirm
   - deny
   - reloc
-  - mood_great
   - thanks
   - bot_challenge
   
 entities:
   - choice
+  - choice1
 
 slots:
   choice:
@@ -23,19 +24,32 @@ slots:
     mappings:
     - type: from_entity
       entity: choice
-      
+  
+  choice1:
+    type: categorical
+    values:
+      - 1
+      - 2
+      - 3
+    mappings:
+    - type: from_entity
+      entity: choice1
+
 responses:
   utter_greet:
-  - text: "Hey I am Sked! How are you?"
+  - text: "Hey! I am Sked! How can I help you?"
 
   utter_again:
+  - text: "I hope that information was helpful. Anything Else?"
+
+  utter_again_affirm:
+  - text: "Ok! I will help you again."
+
+  utter_confirm:
   - text: "Do you need more help?"
 
   utter_start:
-  - text: "Where are you currently?(Home Country/Germany)"  
-
-  utter_happy:
-  - text: "Great, How can I help you?"
+  - text: "Not a problem! Where are you currently?(Home Country/Germany)"  
 
   utter_goodbye:
   - text: "Bye!"
@@ -44,14 +58,30 @@ responses:
   - text: "cya next time"
 
   utter_iamabot:
-  - text: "I am a Sked."
+  - text: "I am a Sked. Your relocation Assistant"
 
-  utter_giveinfo:
-  - text: "Ok! I understand you are in the {choice}. Dont worry, I will help you."
+  utter_giveinfo_germany:
+  - text: "Ok! I understand you are in Germany. Dont worry, I will help you."
 
-  utter_giveinfo_next:
-  - text: "more info"
+  utter_giveinfo_home:
+  - text: "Ok! I understand you are in your Home Country. Dont worry, I will help you."
 
+  utter_germany_options:
+  - text: |-
+      You need to complete the following 3 formalities after moving to Germany.
+       1. City Registration (To know more About this option:Enter > 1)
+       2. Open Bank Account (To know more About this option:Enter > 2)
+       3. Activate Health Insurance (To know more About this option:Enter > 3)
+
+  utter_home_options:
+  - text: |-
+      You need to complete the following 3 formalities before moving to Germany.
+       1. Visa Documents (To know more About this option:Enter > 1)
+       2. Open Blocked Account (To know more About this option:Enter > 2)
+       3. Travel Insurance (To know more About this option:Enter > 3)
+
+actions:
+  - action_user_location
 
 session_config:
   session_expiration_time: 60

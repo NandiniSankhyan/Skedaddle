@@ -6,6 +6,12 @@ nlu:
     - [Home Country](choice)
     - [Germany](choice)
 
+- intent: inform_choice
+  examples: |
+    - [1](choice1)
+    - [2](choice1)
+    - [3](choice1)
+
 - intent: thanks
   examples: |
     - thank you
@@ -77,35 +83,12 @@ nlu:
     - help with moving to germany
     - help with relocation to germany
     - help with relocating to germany
-    - help please
-    - help
-    - need help
-    - yes
-    - yes please
-    - ya
-    - hm
-    - hmm
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - fine
-    - i am fine
-    - good
-    - very good
+    - i need help with the relocation
+    - i need help with relocation to germany
+    - i need to move to germany
+    - i need to go to Bayreuth
+    - i need to relocate to Bayreuth
+    - i need to relocate to Bayreuth, Germany
 
 - intent: bot_challenge
   examples: |
