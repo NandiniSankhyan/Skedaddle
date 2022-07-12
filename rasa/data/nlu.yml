@@ -1,0 +1,98 @@
+version: "3.1"
+
+nlu:
+- intent: inform
+  examples: |
+    - [Home Country](choice)
+    - [Germany](choice)
+
+- intent: inform_choice
+  examples: |
+    - [1](choice1)
+    - [2](choice1)
+    - [3](choice1)
+
+- intent: thanks
+  examples: |
+    - thank you
+    - Thanks
+    - tnq
+    - tq
+    - Ok Great!
+    - great
+    - okay
+    - oky
+    - fine
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hallo
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: reloc
+  examples: |
+    - relocation
+    - reloc
+    - move to germany
+    - go to germany
+    - relocation to germany
+    - reloc to germany
+    - help with moving to germany
+    - help with relocation to germany
+    - help with relocating to germany
+    - i need help with the relocation
+    - i need help with relocation to germany
+    - i need to move to germany
+    - i need to go to Bayreuth
+    - i need to relocate to Bayreuth
+    - i need to relocate to Bayreuth, Germany
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

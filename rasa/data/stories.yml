@@ -1,0 +1,86 @@
+version: "3.1"
+
+stories:
+- story: beginning of flow for Home country
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: reloc
+    - action: utter_start
+    - intent: inform
+      entities:
+      - choice: Home Country
+    - slot_was_set:
+      - choice: Home Country
+    - action: utter_giveinfo_home
+    - checkpoint: loop_home
+
+- story: loop home
+  steps:
+    - checkpoint: loop_home
+    - action: utter_home_options
+    - intent: inform_choice
+      entities:
+      - choice1:
+    - slot_was_set:
+      - choice1:      
+    - action: action_user_location
+    - action: utter_again
+    - checkpoint: check_asked_question_home
+
+- story: handle user affirm_home
+  steps:
+    - checkpoint: check_asked_question_home
+    - action: utter_confirm
+    - intent: affirm
+    - action: utter_again_affirm
+    - checkpoint: loop_home
+
+- story: handle user deny_home
+  steps:
+    - checkpoint: check_asked_question_home
+    - action: utter_confirm
+    - intent: deny
+    - action: utter_goodbye
+
+- story: beginning of flow for Germany
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: reloc
+    - action: utter_start
+    - intent: inform 
+      entities:
+      - choice: Germany
+    - slot_was_set:
+      - choice: Germany
+    - action: utter_giveinfo_germany
+    - checkpoint: loop_germany
+
+- story: loop Germany
+  steps:
+    - checkpoint: loop_germany
+    - action: utter_germany_options
+    - intent: inform_choice
+      entities:
+      - choice1:
+    - slot_was_set:
+      - choice1:      
+    - action: action_user_location
+    - action: utter_again
+    - checkpoint: check_asked_question_germany
+
+- story: handle user affirm_germany
+  steps:
+    - checkpoint: check_asked_question_germany
+    - action: utter_confirm
+    - intent: affirm
+    - action: utter_again_affirm
+    - checkpoint: loop_germany
+
+- story: handle user deny_germany
+  steps:
+    - checkpoint: check_asked_question_germany
+    - action: utter_confirm
+    - intent: deny
+    - action: utter_goodbye
