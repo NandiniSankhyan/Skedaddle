@@ -24,14 +24,13 @@ stories:
       - choice1:
     - slot_was_set:
       - choice1:      
-    - action: action_user_location
-    - action: utter_again
+    - action: action_user_location_home
+    - action: utter_confirm
     - checkpoint: check_asked_question_home
 
 - story: handle user affirm_home
   steps:
     - checkpoint: check_asked_question_home
-    - action: utter_confirm
     - intent: affirm
     - action: utter_again_affirm
     - checkpoint: loop_home
@@ -39,7 +38,6 @@ stories:
 - story: handle user deny_home
   steps:
     - checkpoint: check_asked_question_home
-    - action: utter_confirm
     - intent: deny
     - action: utter_goodbye
 
@@ -66,14 +64,13 @@ stories:
       - choice1:
     - slot_was_set:
       - choice1:      
-    - action: action_user_location
-    - action: utter_again
+    - action: action_user_location_germany
+    - action: utter_confirm
     - checkpoint: check_asked_question_germany
 
 - story: handle user affirm_germany
   steps:
     - checkpoint: check_asked_question_germany
-    - action: utter_confirm
     - intent: affirm
     - action: utter_again_affirm
     - checkpoint: loop_germany
@@ -81,6 +78,6 @@ stories:
 - story: handle user deny_germany
   steps:
     - checkpoint: check_asked_question_germany
-    - action: utter_confirm
     - intent: deny
     - action: utter_goodbye
+    

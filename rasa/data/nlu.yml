@@ -22,7 +22,8 @@ nlu:
     - great
     - okay
     - oky
-    - fine
+    - amazing
+    - wow
 
 - intent: greet
   examples: |
@@ -44,7 +45,7 @@ nlu:
   examples: |
     - cu
     - good by
-    - cee you later
+    - see you later
     - good night
     - bye
     - goodbye
@@ -52,6 +53,8 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - take care
+    - tc
 
 - intent: affirm
   examples: |
@@ -96,3 +99,24 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: bot_contact
+  examples: |
+    - contact please?
+    - Can i speak to someone?
+    - Where can I call you?
+    - i need to talk to a human?
+    - need to speak to a human
+    - connect me to someone
+    - what is your phone number
+    - contact information
+    - contact
+    - human
+    - contact human
+    - call a person
+    - connect me to human
+    - contact details
+    - what is the contact
+    - where can i find volenteers contact
+    - who is my volenteer
+    - volenteer?

@@ -10,6 +10,7 @@ intents:
   - reloc
   - thanks
   - bot_challenge
+  - bot_contact
   
 entities:
   - choice
@@ -37,51 +38,68 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hey! I am Sked! How can I help you?"
+  - text: "How can I assist you today?"
 
   utter_again:
-  - text: "I hope that information was helpful. Do you want to know more about anything else?"
+  - text: "I hope the information was helpful to you."
 
   utter_again_affirm:
-  - text: "Ok! I will help you again."
+  - text: "Sure, I am glad to assist you again."
 
   utter_confirm:
-  - text: "Do you need more help?"
+  - text: "Do you need any other inforamtion?"
 
   utter_start:
-  - text: "Not a problem! Where are you currently?(Home Country/Germany)"  
+  - text: "Not a problem! Where are you currently?\n(Home Country/Germany)"  
 
   utter_goodbye:
   - text: "GoodBye!"
   - text: "See you next time!"
-  - text: "Enjoy and cu"
-  - text: "cya next time"
+  - text: "Have a great day"
+  - text: "See you!"
 
   utter_iamabot:
-  - text: "I am Sked! Your relocation Assistant"
+  - text: "I am Sked! Your Relocation Assistant"
+
+  utter_thanks:
+  - text: "Glad I could help!"
+
+  utter_contact:
+  - text: |-
+      You can get further assistance by connecting with our volunteer. 
+      Email:
+       xyz@gmail.com
+      Phone No:
+       123456789
 
   utter_giveinfo_germany:
-  - text: "Great! You are in Germany. Dont worry, I will help you."
+  - text: "Great! You are in Germany. Be relaxed, I will assist you with the pending formalities."
 
   utter_giveinfo_home:
-  - text: "Okay! I understand you are in your Home Country. Dont worry, I will help you."
+  - text: "Okay! I understand you are in your Home Country.\nI am here to help you with your pending formalities for your relocation to Germany."
 
   utter_germany_options:
   - text: |-
-      You need to complete the following 3 formalities after moving to Germany.
-       1. City Registration (To know more About this option:Enter > 1)
-       2. Open Bank Account (To know more About this option:Enter > 2)
-       3. Activate Health Insurance (To know more About this option:Enter > 3)
+      You need to complete the following 3 formalities after moving to Germany:
+      Please type the choice number and press Enter
+       1. City Registration
+       2. Open Bank Account
+       3. Health Insurance
 
   utter_home_options:
   - text: |-
-      You need to complete the following 3 formalities before moving to Germany.
-       1. Visa Documents (To know more About this option:Enter > 1)
-       2. Open Blocked Account (To know more About this option:Enter > 2)
-       3. Travel Insurance (To know more About this option:Enter > 3)
+      You need to complete the following 3 formalities before moving to Germany:
+      Please type the choice number and press Enter
+       1. Visa Documents 
+       2. Open Blocked Account
+       3. Travel Insurance
+
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
 actions:
-  - action_user_location
+  - action_user_location_home
+  - action_user_location_germany
 
 session_config:
   session_expiration_time: 60
