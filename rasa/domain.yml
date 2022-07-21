@@ -47,7 +47,7 @@ responses:
   - text: "Sure, I am glad to assist you again."
 
   utter_confirm:
-  - text: "Do you need any other inforamtion?"
+  - text: "Do you need any other information?"
 
   utter_start:
   - text: "Not a problem! Where are you currently?\n(Home Country/Germany)"  
@@ -66,10 +66,10 @@ responses:
 
   utter_contact:
   - text: |-
-      You can get further assistance by connecting with our volunteer. 
-      Email:
+      You can get further assistance by connecting with our volunteers. 
+      <b>mail:</b>
        xyz@gmail.com
-      Phone No:
+      <b>Phone No:</b>
        123456789
 
   utter_giveinfo_germany:
@@ -81,21 +81,21 @@ responses:
   utter_germany_options:
   - text: |-
       You need to complete the following 3 formalities after moving to Germany:
-      Please type the choice number and press Enter
-       1. City Registration
-       2. Open Bank Account
-       3. Health Insurance
+      Please type the choice number and press Enter.
+      <b>1. City Registration</b>
+      <b>2. Open Bank Account</b>
+      <b>3. Health Insurance</b>
 
   utter_home_options:
   - text: |-
       You need to complete the following 3 formalities before moving to Germany:
-      Please type the choice number and press Enter
-       1. Visa Documents 
-       2. Open Blocked Account
-       3. Travel Insurance
+      Please type the choice number and press Enter.
+       <b>1. Visa Documents</b>
+       <b>2. Open Blocked Account</b>
+       <b>3. Travel Insurance</b>
 
   utter_please_rephrase:
-  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase it?
 
 actions:
   - action_user_location_home
