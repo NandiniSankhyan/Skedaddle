@@ -50,7 +50,7 @@ responses:
   - text: "Do you need any other information?"
 
   utter_start:
-  - text: "Not a problem! Where are you currently?\n(Home Country/Germany)"  
+  - text: "Not a problem! Where are you currently?<br/>(Home Country/Germany)"  
 
   utter_goodbye:
   - text: "GoodBye!"
@@ -76,22 +76,22 @@ responses:
   - text: "Great! You are in Germany. Be relaxed, I will assist you with the pending formalities."
 
   utter_giveinfo_home:
-  - text: "Okay! I understand you are in your Home Country.\nI am here to help you with your pending formalities for your relocation to Germany."
+  - text: "Okay! I understand you are in your Home Country. <br/>I am here to help you with your pending formalities for your relocation to Germany."
 
   utter_germany_options:
   - text: |-
       You need to complete the following 3 formalities after moving to Germany:
-      Please type the choice number and press Enter.
-      <b>1. City Registration</b>
-      <b>2. Open Bank Account</b>
+      Please type the choice number and press Enter.<br/><br/>
+      <b>1. City Registration</b><br/>
+      <b>2. Open Bank Account</b><br/>
       <b>3. Health Insurance</b>
 
   utter_home_options:
   - text: |-
       You need to complete the following 3 formalities before moving to Germany:
-      Please type the choice number and press Enter.
-       <b>1. Visa Documents</b>
-       <b>2. Open Blocked Account</b>
+      Please type the choice number and press Enter.<br/><br/>
+       <b>1. Visa Documents</b><br/>
+       <b>2. Open Blocked Account</b><br/>
        <b>3. Travel Insurance</b>
 
   utter_please_rephrase:
